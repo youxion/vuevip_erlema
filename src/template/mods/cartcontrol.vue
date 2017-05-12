@@ -17,7 +17,7 @@
   import Vue from 'vue'
   import {mapState, mapMutations} from 'vuex'
   export default {
-    props: ['food', 'index'],
+    props: ['food'],
     data () {
       return {
         ok: true
@@ -28,7 +28,7 @@
         'vxaddCart',
         'vxdecreaseCart'
       ]),
-      addCart (event) {
+      addCart () {
         if (typeof this.food.count === 'undefined') {
           Vue.set(this.food, 'count', 0)
           Vue.set(this.food, 'active', true)

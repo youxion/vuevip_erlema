@@ -1,7 +1,7 @@
 <template>
   <div class="shopCart">
-    <div @click="show = !show" class="content">
-      <div class="content-left">
+    <div class="content">
+      <div class="content-left" @click="show = !show">
         <div class="logo-wrapper">
           <div class="badge" style="display:none;"></div>
           <div class="logo" :class="{'active':deliveryPrice>0}">
@@ -43,7 +43,7 @@
 <script>
   import {mapState, mapMutations} from 'vuex'
   import cartcontrol from './cartcontrol'
-  import Scroll from 'better-scroll'
+//  import Scroll from 'better-scroll'
   export default {
     /* ,
      slectFoods: {
@@ -59,8 +59,9 @@
       }
     },
     mounted () {
-      /* eslint-disable no-new */
-      new Scroll(this.$refs['foodlist'])
+      this.$nextTick(() => {
+        this.listToggle()
+      })
     },
     computed: {
       ...mapState([
@@ -77,9 +78,9 @@
       // 选择商品的数量
       totalCount () {
         let count = 0
-        console.log('----------------------')
+//        console.log('----------------------')
         this.slectFoods.forEach(food => {
-          console.log(food)
+//          console.log(food)
           count += food.count
         })
         return count
@@ -94,6 +95,13 @@
           return '去结算'
         }
       }
+//      },
+//      listToggle () {
+//        /* eslint-disable no-new */
+//        new Scroll(this.$refs['foodlist'], {
+//          click: true
+//        })
+//      }
     },
     methods: {
       ...mapMutations([

@@ -71,8 +71,12 @@
 //        console.log(this.$refs)
 //        console.log(`------------`)
         /* eslint-disable no-new */
-        new Scroll(this.$refs['menu-wrapper'])
-        new Scroll(this.$refs['foods-wrapper'])
+        new Scroll(this.$refs['menu-wrapper'], {
+          click: true
+        })
+        new Scroll(this.$refs['foods-wrapper'], {
+          click: true
+        })
       }
     },
     computed: {
