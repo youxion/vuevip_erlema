@@ -1,0 +1,107 @@
+<template>
+  <div class="shopCart">
+    <div class="content">
+      <div class="content-left">
+        <div class="logo-wrapper">
+          <div class="badge" style="display:none;"></div>
+          <div class="logo" :class="{'active':deliveryPrice>0}">
+            <i class="icon-shopping_cart"></i>
+          </div>
+          <div class="badge" v-show="totalCount>0">{{totalCount}}</div>
+        </div>
+        <div class="price" :class="{'active':totalPrice}">￥{{totalPrice}}</div>
+        <div class="desc" v-show="totalPrice < 100">另需要配送费￥{{deliveryPrice}}元</div>
+      </div>
+      <div class="content-right" :class="{'enough':totalPrice>=minPrice}">
+        <div class="pay">{{ payDesc }}</div>
+      </div>
+    </div>
+    <transition name="transHeight">
+      <div class="shopcart-list" v-show="totalPrice > 0">
+        <div class="list-header">
+          <h1 class="title">购物车</h1>
+          <span class="empty" @click="empty()">清空</span>
+        </div>
+        <div class="list-content">
+          <ul>
+            <li class="food" v-for="food in selectFoods">
+              <span class="name">{{food.name}}</span>
+              <div class="price">
+                <span>￥{{food.price * food.count}}</span>
+              </div>
+              <div class="cartcontrol-wrapper">
+                <cartcontrol :food="food"></cartcontrol>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div></div>
+      </div>
+    </transition>
+  </div>
+</template>
+<script>
+  import {mapState, mapMutations} from 'vuex'
+  import cartcontrol from './cartcontrol'
+  export default {
+    /* ,
+     slectFoods: {
+     default () {
+     return [{price: 20, count: 1}]
+     }
+     } */
+    //      配送费        最少20元起送  有count 或 大于0的商品
+    props: ['deliveryPrice', 'minPrice', 'selectFoods'],
+    computed: {
+      ...mapState([
+        'slectFoods'
+      ]),
+      // 总金额
+      totalPrice () {
+        let total = 0
+        this.slectFoods.forEach(food => {
+          total += food.price * food.count
+        })
+        return total
+      },
+      // 选择商品的数量
+      totalCount () {
+        let count = 0
+        console.log('----------------------')
+        this.slectFoods.forEach(food => {
+          console.log(food)
+          count += food.count
+        })
+        return count
+      },
+      // 起送
+      payDesc () {
+        if (this.totalPrice === 0) {
+          return `￥${this.minPrice}起送`
+        } else if (this.totalPrice < this.minPrice) {
+          return `还差￥${this.minPrice - this.totalPrice}起送`
+        } else {
+          return '去结算'
+        }
+      }
+    },
+    methods: {
+      ...mapMutations([
+        'vxempty'
+      ]),
+      empty () {
+        this.selectFoods.forEach(val => {
+          val.count = 0
+          val.active = true
+        })
+        this.vxempty()
+      }
+    },
+    components: {
+      cartcontrol
+    }
+  }
+</script>
+<style>
+
+</style>
