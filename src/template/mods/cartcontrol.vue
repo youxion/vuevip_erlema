@@ -8,7 +8,7 @@
     <div class="cart-count" v-show="food.count>0">
       {{ food.count }}
     </div>
-    <div class="cart-add" @click.stop.prevent="addCart($event)">
+    <div id="add" class="cart-add" @click.stop.prevent="addCart()">
       <i class="icon-add_circle"></i>
     </div>
   </div>

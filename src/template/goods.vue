@@ -60,7 +60,9 @@
       axios.get('/api/goods', {params: {id: '1'}}).then((res) => {
         this.goods = res.data
         this.$nextTick(() => {
-          this.initScroll()
+          this.$nextTick(() => {
+            this.initScroll()
+          })
         })
       })
     },

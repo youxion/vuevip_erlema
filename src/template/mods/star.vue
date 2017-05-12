@@ -1,11 +1,11 @@
 <template>
-  <div class="star">
+  <div class="star" :class="starType">
     <span v-for="itemClass in itemClasses()" :class="itemClass" class="star-item"></span>
   </div>
 </template>
 <script>
   export default {
-    props: ['score'], // score = 4.8    4   0.8
+    props: ['score', 'size'], // score = 4.8    4   0.8
     methods: {
       itemClasses () {
         let result = []
@@ -21,6 +21,11 @@
           result.push('off') // 如果没有到5 添加 0
         }
         return result
+      }
+    },
+    computed: {
+      starType () {
+        return `star-${this.size}`
       }
     }
   }

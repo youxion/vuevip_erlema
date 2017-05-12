@@ -35,9 +35,7 @@
       <div class="detail-wrapper clearfix">
         <div class="detail-main"><h1 class="name">{{seller.name}}</h1>
           <div class="star-wrapper">
-            <div class="star star-48">
-              <star :score="seller.score"></star>
-            </div>
+              <star :size="48" :score="seller.score"></star>
           </div>
           <div class="title">
             <div class="line"></div>

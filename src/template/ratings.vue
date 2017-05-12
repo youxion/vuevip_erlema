@@ -11,11 +11,13 @@
         <div class="stars">
           <div class="serviceScore">
             <span class="text">服务态度</span>
-            <span class="num">4.3</span>
+            <star :size="36" :score="seller.foodScore"></star>
+            <span class="num">{{seller.foodScore}}</span>
           </div>
           <div class="foodScore">
             <span class="text">服务态度</span>
-            <span class="num">4.3</span>
+            <star :size="36" :score="seller.foodScore"></star>
+            <span class="num">{{seller.foodScore}}</span>
           </div>
           <div class="deliveryTime">
             <span class="text">送达时间</span>
@@ -30,7 +32,12 @@
 </template>
 
 <script>
+  import star from './mods/star.vue'
   export default {
+    props: ['seller'],
+    components: {
+      star
+    }
   }
 </script>
 <style>

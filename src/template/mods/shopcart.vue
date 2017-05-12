@@ -1,6 +1,6 @@
 <template>
   <div class="shopCart">
-    <div class="content">
+    <div @click="show = !show" class="content">
       <div class="content-left">
         <div class="logo-wrapper">
           <div class="badge" style="display:none;"></div>
@@ -17,12 +17,12 @@
       </div>
     </div>
     <transition name="transHeight">
-      <div class="shopcart-list" v-show="totalPrice > 0">
+      <div class="shopcart-list" v-show="totalPrice > 0 && show">
         <div class="list-header">
           <h1 class="title">购物车</h1>
           <span class="empty" @click="empty()">清空</span>
         </div>
-        <div class="list-content">
+        <div class="list-content" ref="foodlist">
           <ul>
             <li class="food" v-for="food in selectFoods">
               <span class="name">{{food.name}}</span>
@@ -43,6 +43,7 @@
 <script>
   import {mapState, mapMutations} from 'vuex'
   import cartcontrol from './cartcontrol'
+  import Scroll from 'better-scroll'
   export default {
     /* ,
      slectFoods: {
@@ -52,6 +53,15 @@
      } */
     //      配送费        最少20元起送  有count 或 大于0的商品
     props: ['deliveryPrice', 'minPrice', 'selectFoods'],
+    data () {
+      return {
+        show: false
+      }
+    },
+    mounted () {
+      /* eslint-disable no-new */
+      new Scroll(this.$refs['foodlist'])
+    },
     computed: {
       ...mapState([
         'slectFoods'
@@ -90,6 +100,7 @@
         'vxempty'
       ]),
       empty () {
+        this.show = false
         this.selectFoods.forEach(val => {
           val.count = 0
           val.active = true
