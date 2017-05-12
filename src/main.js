@@ -14,7 +14,7 @@ new Vue({
   store,
   render: h => h(App)
 })
-
+// a
 // .$mount('#app') === el:'#app',
 // template: '<App/>',
 // components: { App }
