@@ -1,6 +1,6 @@
 # vip
 
-> A Vue.js project
+> 潭州前端Vip
 
 ## Build Setup
 
