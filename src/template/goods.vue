@@ -1,6 +1,6 @@
 <template>
   <div class="goods">
-    <!-- TODO:带联动滚动 -->
+    <!-- TODO:待联动滚动 -->
     <div class="menu-wrapper" ref="menu-wrapper">
       <ul>
         <li v-for="item in goods" class="menu-item">
@@ -13,10 +13,10 @@
     </div>
     <div class="foods-wrapper" ref="foods-wrapper">
       <ul>
-        <li v-for="(item, oindex) in goods" class="food-list food-list-hook">
+        <li v-for="item in goods" class="food-list food-list-hook">
           <h1 class="title">{{item.name}}</h1>
           <ul>
-            <li v-for="(food, tindex) in item.foods" class="food-item">
+            <li v-for="food in item.foods" @click="goDetail(food)" class="food-item">
               <div class="icon">
                 <img width="57" height="57" :src="food.icon" >
               </div>
@@ -41,6 +41,7 @@
       </ul>
     </div>
     <shopcart :deliveryPrice="seller.deliveryPrice" :minPrice = "seller.minPrice" :selectFoods="selectFoods"></shopcart>
+    <foodDetail :food="selectedFood" v-if="selectedFood" ref="myFood"></foodDetail>
   </div>
 </template>
 <script>
@@ -48,12 +49,14 @@
   import Scroll from 'better-scroll'
   import shopcart from './mods/shopcart.vue'
   import cartcontrol from './mods/cartcontrol.vue'
+  import foodDetail from './mods/foodDetail.vue'
   export default {
     props: ['seller'],
     data () {
       return {
         goods: null,
-        iconClassMap: ['decrease', 'discount', 'special', 'invoice', 'guarantee']
+        iconClassMap: ['decrease', 'discount', 'special', 'invoice', 'guarantee'],
+        selectedFood: ''
       }
     },
     mounted () {
@@ -77,6 +80,13 @@
         new Scroll(this.$refs['foods-wrapper'], {
           click: true
         })
+      },
+      goDetail (food) {
+        this.selectedFood = food
+        this.$nextTick(() => {
+//          console.log(this.$refs.myFood)
+          this.$refs.myFood.show()
+        })
       }
     },
     computed: {
@@ -95,7 +105,8 @@
     },
     components: {
       shopcart,
-      cartcontrol
+      cartcontrol,
+      foodDetail
     }
   }
 </script>

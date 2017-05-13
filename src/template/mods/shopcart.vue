@@ -60,7 +60,6 @@
     },
     mounted () {
       this.$nextTick(() => {
-        this.listToggle()
       })
     },
     computed: {

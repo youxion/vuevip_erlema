@@ -231,7 +231,7 @@ body, html{
 .header .bulletin-wrapper .bulletin-title{
   display: inline-block;
   vertical-align: top;
-  margin-top: 8px;
+  margin-top: 10px;
   width: 22px;
   height: 12px;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAYCAYAAACBbx+6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Mjk0NDhEMDg0RDhGMTFFNkJGNzlFOUVCREZEMzI2ODciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjk0NDhEMDk0RDhGMTFFNkJGNzlFOUVCREZEMzI2ODciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyOTQ0OEQwNjREOEYxMUU2QkY3OUU5RUJERkQzMjY4NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyOTQ0OEQwNzREOEYxMUU2QkY3OUU5RUJERkQzMjY4NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Puq6d8sAAAM6SURBVHja1FdLTFNBFL0YdrZbS7cI7vjuqoZEI0EwGhKIGkxABbugKNJFaWJ1IZC0JLapKS6IqDVKRK2BxL+uiIaVIrqTzw7aurTt+vnOwAzT+qYfNeo7ycvrm++59557Z1qmaVorEU3pj53+b8T1p7dMJ7xhArKCNAhrZCLsIJOhvJhB8+8WqKG+hqwWy3ZsEkn2NNbXFo6jPg6wV9jY+9nLN7S49IV9V++upKb9jj9HGJt5r4yQxbKTmvY5yDfspuXVNXINDbP+2PTtLEOMMOD2snVAcLDfSYnkN3r+6i3ra6irKYlwQUlMRe+zdzqdEZ6CV3hbeGIy7/yPnz6LeYygHikVUuk0cwQcokLepMMCLceOi+9I0C8k8ODxLF2/sUn2kmeIjhxuNlwDBBD+UoBoRicjQkJFS+JhbG7bM3roZL2e7GynR0/mmPfGxkOsLZc0vMvJ9vacYmsAkAOXBKI16HJmzbNaLYZk8xIGkZnYrLAY2uXJAi1Dd/As9AkYkeZyAVk8HLLHsXYxiVtQw9AuNAogUWDxrbvTzDNIQoQaG7W1HBJzQDqsywRSAnxeN/mvXs4iWwjQb0fXGaWOy1WJwkMGQvAavCsnz4mO9k1j9HAur6yJDWZ0bXMjes4NFCQIb+892GaofSMd/5R08M5p53lGDhtDCgCs5oTldu4VbICIyOGH4SWdu1ulj+uYV6MsaDnYiCe05qOd2oj/mmi7eeee5jjQyp7uPpf2PZVi7R8Wl1gf8HVlVeu/6MldjrXxeRijwtMXr9k4jOfrG8GwrMmWwuPwLryHBJkIBYTl3Ou5SfXXy5o8cCwQyko+OUxnu7tYoiFBizliL+jz91RVGvbJpa6xrrb0ssbP/Pn3C8rDAd+oHPDy6HiQolUR5UYAyKpKmByFaoVReQmDbHjrJEOIcP6PBoIi8fAtVw1EAf2QzD+5rYEQlwLe/E4hg8uA98FLuNmppIGDBMar9vstwihduST58Qyi8nUTJOPJJPk87rw6RqhVksm9JP3S5QeyACm73WZcE6U6XGHbZXjNxCUpk8mwfhijuoqCMK9EMEw1zpR/keIm4psA4T78MAHZdVz8fggwAAhHLI5JzyRSAAAAAElFTkSuQmCC);
@@ -686,7 +686,6 @@ body, html{
 }
 .shopCart{
   position: fixed;
-  left: 0;
   bottom: 0;
   width: 100%;
   height: 48px;
@@ -955,7 +954,7 @@ body, html{
 .backdrop.fade-backdrop-leave-active{
   opacity: 0;
 }
-.detailWrapper[data-v-70ea5327]{
+.detailWrapper{
   position: fixed;
   left: 0;
   top: 0;
@@ -964,15 +963,15 @@ body, html{
   background: #fff;
   transition: all 0.4s ease;
 }
-.detailWrapper.move-enter-avtive[data-v-70ea5327],
-.detailWrapper.move-leave-active[data-v-70ea5327]{
+.detailWrapper.move-enter-avtive,
+.detailWrapper.move-leave-active{
   transform: translate3d(0, 0, 0);
 }
-.detailWrapper.move-enter[data-v-70ea5327],
-.detailWrapper.move-leave-active[data-v-70ea5327]{
+.detailWrapper.move-enter,
+.detailWrapper.move-leave-active{
   transform: translate3d(100%, 0, 0);
 }
-.foodDetail .back[data-v-70ea5327]{
+.foodDetail .back{
   position: absolute;
   color: #fff;
   top: 12px;
@@ -980,19 +979,19 @@ body, html{
   font-size: 20px;
   padding: 10px;
 }
-.foodDetail .info[data-v-70ea5327]{
+.foodDetail .info{
   position: relative;
   box-sizing: border-box;
   width: 100%;
   padding: 18px;
 }
-.foodDetail .info .title[data-v-70ea5327]{
+.foodDetail .info .title{
   font-size: 14px;
   font-weight: 700;
   color: #07111b;
   line-height: 14px;
 }
-.foodDetail .info .desc[data-v-70ea5327]{
+.foodDetail .info .desc{
   display: -ms-flexbox;
   display: flex;
   padding: 0;
@@ -1001,10 +1000,10 @@ body, html{
   color: #93999f;
   line-height: 10px;
 }
-.foodDetail .info .desc span[data-v-70ea5327]:last-child{
+.foodDetail .info .desc span:last-child{
   padding-left: 12px;
 }
-.foodDetail .info .price[data-v-70ea5327]{
+.foodDetail .info .price{
   display: -ms-flexbox;
   display: flex;
   padding-top: 18px;
@@ -1013,26 +1012,27 @@ body, html{
   color: #f01414;
   line-height: 24px;
 }
-.foodDetail .info .price .unit[data-v-70ea5327]{
+.foodDetail .info .price .unit{
   font-size: 10px;
   font-weight: normal;
 }
-.foodDetail .info .price .oldPrice[data-v-70ea5327]{
+.foodDetail .info .price .oldPrice{
   padding-left: 12px;
   font-size: 10px;
   font-weight: normal;
   color: #93999f;
   line-height: 24px;
 }
-.foodDetail .info .shopCart[data-v-70ea5327]{
+.foodDetail .info .shopCart{
   position: absolute;
   right: 18px;
+  width:84px;
   bottom: 18px;
   height: 24px;
   text-align: center;
   z-index: 2;
 }
-.foodDetail .info .shopCart .text[data-v-70ea5327]{
+.foodDetail .info .shopCart .text{
   box-sizing: border-box;
   height: 100%;
   line-height: 24px;
@@ -1042,51 +1042,51 @@ body, html{
   border-radius: 12px;
   background: #00a0dc;
 }
-.foodDetail .info .shopCart .text.fade-enter-active[data-v-70ea5327],
-.foodDetail .info .shopCart .text.fade-leave-active[data-v-70ea5327]{
+.foodDetail .info .shopCart .text.fade-enter-active,
+.foodDetail .info .shopCart .text.fade-leave-active{
   transition: opacity 0.5s;
 }
-.foodDetail .info .shopCart .text.fade-enter[data-v-70ea5327],
-.foodDetail .info .shopCart .text.fade-leave-active[data-v-70ea5327]{
+.foodDetail .info .shopCart .text.fade-enter,
+.foodDetail .info .shopCart .text.fade-leave-active{
   opacity: 0;
 }
-.foodDetail .info .cartcontrol[data-v-70ea5327]{
+.foodDetail .info .cartcontrol{
   position: absolute;
   right: 12px;
   bottom: 12px;
 }
-.foodDetail .desc[data-v-70ea5327]{
+.foodDetail .desc{
   padding: 18px;
 }
-.foodDetail .desc .title[data-v-70ea5327]{
+.foodDetail .desc .title{
   font-size: 14px;
   font-weight: 500;
   color: #07111b;
   margin-bottom: 6px;
 }
-.foodDetail .desc .content[data-v-70ea5327]{
+.foodDetail .desc .content{
   font-size: 12px;
   font-weight: 200;
   color: #4d555d;
   line-height: 24px;
   padding: 0 8px;
 }
-.foodDetail .evaluation[data-v-70ea5327]{
+.foodDetail .evaluation{
   padding: 18px 0;
   position: relative;
 }
-.foodDetail .evaluation .title[data-v-70ea5327]{
+.foodDetail .evaluation .title{
   padding-left: 18px;
   font-size: 14px;
   font-weight: 500;
   color: #07111b;
 }
-.foodDetail .evaluation .classify[data-v-70ea5327]{
+.foodDetail .evaluation .classify{
   padding: 18px 0;
   margin: 0 18px;
   border-bottom: 1px solid rgba(7, 17, 27, 0.1);
 }
-.foodDetail .evaluation .classify .item[data-v-70ea5327]{
+.foodDetail .evaluation .classify .item{
   display: inline-block;
   font-size: 12px;
   padding: 8px 12px;
@@ -1095,75 +1095,75 @@ body, html{
   color: #4d555f;
   margin-right: 8px;
 }
-.foodDetail .evaluation .classify .item .count[data-v-70ea5327]{
+.foodDetail .evaluation .classify .item .count{
   font-size: 8px;
   padding-left: 2px;
 }
-.foodDetail .evaluation .classify .item.active[data-v-70ea5327]{
+.foodDetail .evaluation .classify .item.active{
   color: #fff;
   background: #00a9dc;
 }
-.foodDetail .evaluation .classify .item.bad[data-v-70ea5327]{
+.foodDetail .evaluation .classify .item.bad{
   background: rgba(77, 85, 93, 0.2);
 }
-.foodDetail .evaluation .classify .item.badActive[data-v-70ea5327]{
+.foodDetail .evaluation .classify .item.badActive{
   background: #4d555d;
 }
-.foodDetail .evaluation .switch[data-v-70ea5327]{
+.foodDetail .evaluation .switch{
   font-size: 12px;
   width: 100%;
   padding: 12px 0 12px 18px;
   color: #93999f;
   border-bottom: 1px solid rgba(7, 17, 27, 0.1);
 }
-.foodDetail .evaluation .switch .icon-check_circle[data-v-70ea5327]{
+.foodDetail .evaluation .switch .icon-check_circle{
   font-size: 24px;
   vertical-align: middle;
 }
-.foodDetail .evaluation .switch .icon-check_circle.on[data-v-70ea5327]{
+.foodDetail .evaluation .switch .icon-check_circle.on{
   color: #00c850;
 }
-.foodDetail .evaluation .evel-list[data-v-70ea5327]{
+.foodDetail .evaluation .evel-list{
   margin: 0 18px;
 }
-.foodDetail .evaluation .evel-list .evel[data-v-70ea5327]{
+.foodDetail .evaluation .evel-list .evel{
   padding: 16px 0;
   border-bottom: 1px solid rgba(7, 17, 27, 0.1);
 }
-.foodDetail .evaluation .evel-list .evel .userInfo[data-v-70ea5327]{
+.foodDetail .evaluation .evel-list .evel .userInfo{
   display: -ms-flexbox;
   display: flex;
   color: #93999f;
   font-size: 10px;
   line-height: 12px;
 }
-.foodDetail .evaluation .evel-list .evel .userInfo .time[data-v-70ea5327]{
+.foodDetail .evaluation .evel-list .evel .userInfo .time{
   -ms-flex: 1;
   flex: 1;
 }
-.foodDetail .evaluation .evel-list .evel .userInfo .user[data-v-70ea5327]{
+.foodDetail .evaluation .evel-list .evel .userInfo .user{
   -ms-flex: 1;
   flex: 1;
   text-align: right;
 }
-.foodDetail .evaluation .evel-list .evel .userInfo .user .avatar img[data-v-70ea5327]{
+.foodDetail .evaluation .evel-list .evel .userInfo .user .avatar img{
   padding-left: 6px;
   border-radius: 50%;
 }
-.foodDetail .evaluation .evel-list .evel .content[data-v-70ea5327]{
+.foodDetail .evaluation .evel-list .evel .content{
   padding-top: 6px;
 }
-.foodDetail .evaluation .evel-list .evel .content .icon[data-v-70ea5327]{
+.foodDetail .evaluation .evel-list .evel .content .icon{
   font-size: 12px;
   line-height: 24px;
 }
-.foodDetail .evaluation .evel-list .evel .content .icon.icon-thumb_up[data-v-70ea5327]{
+.foodDetail .evaluation .evel-list .evel .content .icon.icon-thumb_up{
   color: #00a0dc;
 }
-.foodDetail .evaluation .evel-list .evel .content .icon.icon-thumb_down[data-v-70ea5327]{
+.foodDetail .evaluation .evel-list .evel .content .icon.icon-thumb_down{
   color: #93999f;
 }
-.foodDetail .evaluation .evel-list .evel .content .text[data-v-70ea5327]{
+.foodDetail .evaluation .evel-list .evel .content .text{
   font-size: 12px;
   color: #07111b;
   line-height: 16px;
@@ -1353,7 +1353,7 @@ body, html{
   white-space: normal;
   margin-top: 4px;
 }
-.seller-wrapper[data-v-0e3205b2]{
+.seller-wrapper{
   position: absolute;
   top: 174px;
   bottom: 0;
@@ -1361,148 +1361,148 @@ body, html{
   width: 100%;
   overflow: hidden;
 }
-.seller-wrapper .seller-content .info[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info{
   padding: 18px 0;
   margin: 0 18px;
 }
-.seller-wrapper .seller-content .info .title[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .title{
   padding-bottom: 18px;
   border-bottom: 1px solid rgba(7, 17, 27, 0.1);
 }
-.seller-wrapper .seller-content .info .title .text[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .title .text{
   font-size: 14px;
   color: #07111b;
   line-height: 14px;
 }
-.seller-wrapper .seller-content .info .title .star-wrapper[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .title .star-wrapper{
   padding-top: 8px;
   font-size: 0;
 }
-.seller-wrapper .seller-content .info .title .star-wrapper .star[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .title .star-wrapper .star{
   display: inline-block;
   vertical-align: top;
 }
-.seller-wrapper .seller-content .info .title .star-wrapper .rate-count[data-v-0e3205b2],
-.seller-wrapper .seller-content .info .title .star-wrapper .sell-count[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .title .star-wrapper .rate-count,
+.seller-wrapper .seller-content .info .title .star-wrapper .sell-count{
   display: inline-block;
   font-size: 10px;
   color: #4d555d;
   line-height: 18px;
 }
-.seller-wrapper .seller-content .info .title .star-wrapper .rate-count[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .title .star-wrapper .rate-count{
   padding: 0 12px 0 8px;
 }
-.seller-wrapper .seller-content .info .title .collect[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .title .collect{
   position: absolute;
   top: 18px;
   right: 8px;
   width: 50px;
   text-align: center;
 }
-.seller-wrapper .seller-content .info .title .collect .icon-favorite[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .title .collect .icon-favorite{
   font-size: 24px;
   line-height: 24px;
   color: #d4d6d9;
 }
-.seller-wrapper .seller-content .info .title .collect .icon-favorite.active[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .title .collect .icon-favorite.active{
   color: #f01414;
 }
-.seller-wrapper .seller-content .info .title .collect .text[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .title .collect .text{
   display: block;
   font-size: 10px;
   color: #4d555d;
   line-height: 10px;
   padding-top: 4px;
 }
-.seller-wrapper .seller-content .info .remark[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .remark{
   display: -ms-flexbox;
   display: flex;
 }
-.seller-wrapper .seller-content .info .remark .block[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .remark .block{
   -ms-flex: 1;
   flex: 1;
   margin-top: 18px;
   text-align: center;
   border-right: 1px solid rgba(7, 17, 27, 0.1);
 }
-.seller-wrapper .seller-content .info .remark .block[data-v-0e3205b2]:last-child{
+.seller-wrapper .seller-content .info .remark .block:last-child{
   border: none;
 }
-.seller-wrapper .seller-content .info .remark .block h2[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .remark .block h2{
   font-size: 10px;
   color: #93999f;
   line-height: 10px;
   margin-bottom: 4px;
 }
-.seller-wrapper .seller-content .info .remark .block .content[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .remark .block .content{
   font-size: 10px;
   color: #07111b;
   line-height: 24px;
   font-weight: 200;
 }
-.seller-wrapper .seller-content .info .remark .block .content .num[data-v-0e3205b2]{
+.seller-wrapper .seller-content .info .remark .block .content .num{
   position: relative;
   top: 2px;
   font-size: 24px;
 }
-.seller-wrapper .seller-content .activities[data-v-0e3205b2]{
+.seller-wrapper .seller-content .activities{
   padding-top: 18px;
 }
-.seller-wrapper .seller-content .activities .bulletin[data-v-0e3205b2]{
+.seller-wrapper .seller-content .activities .bulletin{
   margin: 0 18px;
   border-bottom: 1px solid rgba(7, 17, 27, 0.1);
 }
-.seller-wrapper .seller-content .activities .bulletin h1[data-v-0e3205b2]{
+.seller-wrapper .seller-content .activities .bulletin h1{
   font-size: 14px;
   color: #07111b;
   line-height: 14px;
 }
-.seller-wrapper .seller-content .activities .bulletin .content[data-v-0e3205b2]{
+.seller-wrapper .seller-content .activities .bulletin .content{
   padding: 8px 12px 16px 12px;
   font-size: 12px;
   font-weight: 200;
   color: #f01414;
   line-height: 24px;
 }
-.seller-wrapper .seller-content .supports[data-v-0e3205b2]{
+.seller-wrapper .seller-content .supports{
   margin: 0 18px;
 }
-.seller-wrapper .seller-content .supports .item[data-v-0e3205b2]{
+.seller-wrapper .seller-content .supports .item{
   padding: 16px;
   border-bottom: 1px solid rgba(7, 17, 27, 0.1);
   font-size: 0;
 }
-.seller-wrapper .seller-content .supports .item .iconMap[data-v-0e3205b2]{
+.seller-wrapper .seller-content .supports .item .iconMap{
   width: 16px;
   height: 16px;
   vertical-align: top;
   margin-right: 6px;
 }
-.seller-wrapper .seller-content .supports .item .text[data-v-0e3205b2]{
+.seller-wrapper .seller-content .supports .item .text{
   font-size: 12px;
   font-weight: 200;
   color: #07111b;
   line-height: 16px;
 }
-.seller-wrapper .seller-content .seller-imgs[data-v-0e3205b2]{
+.seller-wrapper .seller-content .seller-imgs{
   margin: 18px;
   white-space: nowrap;
   overflow: hidden;
 }
-.seller-wrapper .seller-content .seller-imgs h1[data-v-0e3205b2]{
+.seller-wrapper .seller-content .seller-imgs h1{
   font-size: 14px;
   line-height: 14px;
   margin-bottom: 12px;
 }
-.seller-wrapper .seller-content .seller-imgs img[data-v-0e3205b2]{
+.seller-wrapper .seller-content .seller-imgs img{
   margin-right: 6px;
 }
-.seller-wrapper .seller-content .seller-info h1[data-v-0e3205b2]{
+.seller-wrapper .seller-content .seller-info h1{
   margin: 0 18px;
   padding: 18px 0 12px 0;
   border-bottom: 1px solid rgba(7, 17, 27, 0.1);
 }
-.seller-wrapper .seller-content .seller-info .info-list .info[data-v-0e3205b2]{
+.seller-wrapper .seller-content .seller-info .info-list .info{
   font-size: 12px;
   font-weight: 200;
   color: #07111b;
@@ -1510,6 +1510,6 @@ body, html{
   padding: 16px 12px;
   border-bottom: 1px solid rgba(7, 17, 27, 0.1);
 }
-.seller-wrapper .seller-content .seller-info .info-list .info[data-v-0e3205b2]:last-child{
+.seller-wrapper .seller-content .seller-info .info-list .info:last-child{
   border: none;
 }
