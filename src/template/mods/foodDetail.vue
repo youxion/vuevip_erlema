@@ -38,27 +38,27 @@
               <!--{{item.name}}<span class="count">{{item.count}}</span>-->
             <!--</span>-->
           </div>
-          <!--<div class="switch" @click="evelflag=!evelflag">-->
-            <!--<span class="icon-check_circle" :class="{'on':evelflag}"></span>-->
-            <!--<span class="text">只看有内容的评价</span>-->
-          <!--</div>-->
-          <!--<div class="evel-list">-->
-            <!--<ul>-->
-              <!--<li class="evel" v-for="evel in evelArr">-->
-                <!--<div class="userInfo">-->
-                  <!--<div class="time">{{evel.rateTime | time}}</div>-->
-                  <!--<div class="user">-->
-                    <!--<span>{{evel.username}}</span>-->
-                    <!--<span class="avatar"><img :src="evel.avatar" width="12" height="12"></span>-->
-                  <!--</div>-->
-                <!--</div>-->
-                <!--<div class="content">-->
-                  <!--<span class="icon" :class="evel.rateType?'icon-thumb_down':'icon-thumb_up'"></span>-->
-                  <!--<span class="text">{{evel.text}}</span>-->
-                <!--</div>-->
-              <!--</li>-->
-            <!--</ul>-->
-          <!--</div>-->
+          <!-- <div class="switch" @click="evelflag=!evelflag">
+            <span class="icon-check_circle" :class="{'on':evelflag}"></span>
+            <span class="text">只看有内容的评价</span>
+          </div>
+          <div class="evel-list">
+            <ul>
+              <li class="evel" v-for="evel in evelArr">
+                <div class="userInfo">
+                  <div class="time">{{evel.rateTime | time}}</div>
+                  <div class="user">
+                    <span>{{evel.username}}</span>
+                    <span class="avatar"><img :src="evel.avatar" width="12" height="12"></span>
+                  </div>
+                </div>
+                <div class="content">
+                  <span class="icon" :class="evel.rateType?'icon-thumb_down':'icon-thumb_up'"></span>
+                  <span class="text">{{evel.text}}</span>
+                </div>
+              </li>
+            </ul>
+          </div> -->
         </div>
       </div>
     </div>
