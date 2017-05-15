@@ -2,13 +2,13 @@ export default {
   // 添加商品
   vxaddCart (state, value) {
     // console.log(value.count)
-    state.slectFoods.push(value)
+    state.vxselectFoods.push(value)
   },
   // 删除商品
   vxdecreaseCart (state, value) {
-    state.slectFoods.forEach((val, index) => {
+    state.vxselectFoods.forEach((val, index) => {
       if (val.name === value.name) {
-        state.slectFoods.splice(index, 1)
+        state.vxselectFoods.splice(index, 1)
       }
     })
   },
@@ -17,6 +17,6 @@ export default {
     //   val.count = 0
     //   val.active = true
     // })
-    state.slectFoods.splice(0, state.slectFoods.length)
+    state.vxselectFoods.splice(0, state.vxselectFoods.length)
   }
 }

@@ -41,16 +41,10 @@
   </div>
 </template>
 <script>
-  import {mapState, mapMutations} from 'vuex'
+  import {mapMutations} from 'vuex'
   import cartcontrol from './cartcontrol'
 //  import Scroll from 'better-scroll'
   export default {
-    /* ,
-     slectFoods: {
-     default () {
-     return [{price: 20, count: 1}]
-     }
-     } */
     //      配送费        最少20元起送  有count 或 大于0的商品
     props: ['deliveryPrice', 'minPrice', 'selectFoods'],
     data () {
@@ -63,13 +57,11 @@
       })
     },
     computed: {
-      ...mapState([
-        'slectFoods'
-      ]),
       // 总金额
       totalPrice () {
+        // console.log(this.selectFoods)
         let total = 0
-        this.slectFoods.forEach(food => {
+        this.selectFoods.forEach(food => {
           total += food.price * food.count
         })
         return total
@@ -78,7 +70,7 @@
       totalCount () {
         let count = 0
 //        console.log('----------------------')
-        this.slectFoods.forEach(food => {
+        this.selectFoods.forEach(food => {
 //          console.log(food)
           count += food.count
         })

@@ -28,7 +28,7 @@
       <div class="divider"></div>
       <div class="evaluation">
         <div class="classify">
-          <span v-for="(item,index) in classifyArr" class="item" :class="{'active':item.active,'bad':index==2,'badActive':item.active&&index==2}" @click="filterEvel(index)">
+          <span v-for="(item,index) in classifyArr" class="item" :class="{'active':item.active,'bad':index==2,'badActive':item.active&&index==2}" @click="filterEvel(item)">
             {{item.name}}<span class="count">{{item.count}}</span>
           </span>
         </div>
@@ -38,7 +38,7 @@
         </div>
         <div class="evel-list">
           <ul>
-            <li class="evel" v-for="evel in comment">
+            <li class="evel" v-for="evel in comments">
               <div class="avatar">
                 <img :src="evel.avatar" width="28" height="28">
               </div>
@@ -102,36 +102,44 @@
       this.$nextTick(() => {
         axios.get('/api/ratings').then(res => {
           this.ratings = res.data
-          this.a()
-          this.comment = res.data
+          this.ratings.forEach(val => {
+            this.classifyArr[0].count++
+            this.classifyArr[0].comment.push(val)
+            if (val.score > 3) {
+              this.classifyArr[1].count++
+              this.classifyArr[1].comment.push(val)
+            }
+            if (val.score <= 3) {
+              this.classifyArr[2].count++
+              this.classifyArr[2].comment.push(val)
+            }
+          })
+          this.comment = this.ratings
         })
       })
     },
     computed: {
+      comments () {
+        if (this.evelflag) {
+          let arr = []
+          this.comment.forEach(val => {
+            if (val.text.length > 0) {
+              arr.push(val)
+            }
+          })
+          return arr
+        } else {
+          return this.comment
+        }
+      }
     },
     methods: {
-      a () {
-        this.ratings.forEach((val, i) => {
-          this.classifyArr[0].count++
-          this.classifyArr[0].comment.push(val)
-          if (val.score > 3 && val.score < 5) {
-            this.classifyArr[1].count++
-            this.classifyArr[1].comment.push(val)
-          }
-          if (val.score < 3) {
-            this.classifyArr[2].count++
-            this.classifyArr[2].comment.push(val)
-          }
-        })
-      },
-      filterEvel (i = 0) {
-//        console.log(i)
-//        console.log(this.classifyArr[i].comment)
-        this.classifyArr.forEach((val) => {
+      filterEvel (item) {
+        this.classifyArr.forEach(val => {
           val.active = false
         })
-        this.classifyArr[i].active = true
-        this.comment = this.classifyArr[i].comment
+        item.active = true
+        this.comment = item.comment
       }
     },
     components: {

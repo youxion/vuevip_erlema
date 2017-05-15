@@ -54,7 +54,7 @@
     props: ['seller'],
     data () {
       return {
-        goods: null,
+        goods: [],
         iconClassMap: ['decrease', 'discount', 'special', 'invoice', 'guarantee'],
         selectedFood: ''
       }
