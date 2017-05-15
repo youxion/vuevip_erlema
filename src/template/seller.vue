@@ -9,7 +9,7 @@
             <span class="rate-count">({{seller.ratingCount}})</span>
             <span class="sell-count">月售{{seller.sellCount}}单</span>
           </div>
-          <div class="collect" @click="collectflag=!collectflag">
+          <div class="collect" @click.stop.prevent="collectflag=!collectflag">
             <span class="icon-favorite" :class="{'active':collectflag}"></span>
             <span class="text">{{collectflag?'已收藏':'收藏'}}</span>
           </div>
@@ -73,7 +73,7 @@
 </template>
 <script>
   import star from './mods/star.vue'
-  import Scroll from 'better-scroll'
+//  import Scroll from 'better-scroll'
   export default {
     props: ['seller'],
     data () {
@@ -85,9 +85,9 @@
     mounted () {
       this.$nextTick(() => {
         /* eslint-disable no-new */
-        new Scroll(this.$refs['sellerWrapper'], {
-          click: true
-        })
+//        new Scroll(this.$refs['sellerWrapper'], {
+//          click: true
+//        })
       })
     },
     components: {

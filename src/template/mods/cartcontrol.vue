@@ -15,7 +15,7 @@
 </template>
 <script>
   import Vue from 'vue'
-  import {mapState, mapMutations} from 'vuex'
+  import {mapMutations} from 'vuex'
   export default {
     props: ['food'],
     data () {
@@ -53,11 +53,6 @@
         console.log(this.food)
         console.log('--------------decreaseCart-----------------')
       }
-    },
-    computed: {
-      ...mapState([
-        'slectFoods'
-      ])
     }
   }
 </script>
