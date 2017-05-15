@@ -39,6 +39,9 @@
           this.vxaddCart(this.food)
           this.food.active = false
         }
+        console.log('--------------addCart-----------------')
+        console.log(this.food)
+        console.log('--------------addCart-----------------')
       },
       decreaseCart () {
         this.food.count--
@@ -46,6 +49,9 @@
           this.vxdecreaseCart(this.food)
           this.food.active = true
         }
+        console.log('--------------decreaseCart-----------------')
+        console.log(this.food)
+        console.log('--------------decreaseCart-----------------')
       }
     },
     computed: {

@@ -1,6 +1,7 @@
 export default {
   // 添加商品
   vxaddCart (state, value) {
+    // console.log(value.count)
     state.slectFoods.push(value)
   },
   // 删除商品

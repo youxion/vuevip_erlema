@@ -41,7 +41,7 @@
       </ul>
     </div>
     <shopcart :deliveryPrice="seller.deliveryPrice" :minPrice = "seller.minPrice" :selectFoods="selectFoods"></shopcart>
-    <foodDetail :food="selectedFood" v-if="selectedFood" ref="myFood"></foodDetail>
+    <foodDetail :food="selectedFood" ref="myFood"></foodDetail>
   </div>
 </template>
 <script>
@@ -83,10 +83,10 @@
       },
       goDetail (food) {
         this.selectedFood = food
-        this.$nextTick(() => {
+//        this.$nextTick(() => {
 //          console.log(this.$refs.myFood)
-          this.$refs.myFood.show()
-        })
+        this.$refs.myFood.show()
+//        })
       }
     },
     computed: {
