@@ -1,12 +1,11 @@
 <template>
   <div class="ratingsWrapper" ref="ratingsWrapper">
-    <!-- TODO:待添加数据 -->
     <div class="ratings-content">
       <div class="info">
         <div class="mark">
           <div class="num">{{seller.score}}</div>
           <div class="text">综合评分</div>
-          <div class="contrast">高于周边商家69.2%</div>
+          <div class="contrast">高于周边商家{{seller.rankRate}}%</div>
         </div>
         <div class="stars">
           <div class="serviceScore">
