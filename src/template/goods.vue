@@ -45,34 +45,23 @@
   </div>
 </template>
 <script>
-  import axios from 'axios'
   import Scroll from 'better-scroll'
   import shopcart from './mods/shopcart.vue'
   import cartcontrol from './mods/cartcontrol.vue'
   import foodDetail from './mods/foodDetail.vue'
+  import {mapState} from 'vuex'
   export default {
-    props: ['seller'],
+    props: ['seller', 'goods'],
     data () {
       return {
-        goods: [],
+//        goods: [],
         iconClassMap: ['decrease', 'discount', 'special', 'invoice', 'guarantee'],
-        selectedFood: ''
+        selectedFood: '',
+        foods: []
       }
     },
     mounted () {
-      axios.get('/api/goods', {params: {id: '1'}}).then((res) => {
-        this.goods = res.data
-        this.$nextTick(() => {
-          this.$nextTick(() => {
-            this.initScroll()
-          })
-        })
-      })
-    },
-    methods: {
-      initScroll () {
-//        console.log(this.$refs)
-//        console.log(`------------`)
+      this.$nextTick(() => {
         /* eslint-disable no-new */
         new Scroll(this.$refs['menu-wrapper'], {
           click: true
@@ -80,7 +69,9 @@
         new Scroll(this.$refs['foods-wrapper'], {
           click: true
         })
-      },
+      })
+    },
+    methods: {
       goDetail (food) {
         this.selectedFood = food
 //        this.$nextTick(() => {
@@ -89,18 +80,30 @@
 //        })
       }
     },
+    updated () {
+      /* eslint-disable no-new */
+//      new Scroll(this.$refs['menu-wrapper'], {
+//        click: true
+//      })
+//      new Scroll(this.$refs['foods-wrapper'], {
+//        click: true
+//      })
+    },
     computed: {
+      ...mapState([
+        'vxselectFoods'
+      ]),
       // 有count 或 大于0的商品
       selectFoods () {
-        let foods = []
+        this.foods = []
         this.goods.forEach((good) => {
           good.foods.forEach((food) => {
             if (food.count) {
-              foods.push(food)
+              this.foods.push(food)
             }
           })
         })
-        return foods
+        return this.foods
       }
     },
     components: {

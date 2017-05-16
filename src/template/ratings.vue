@@ -67,6 +67,7 @@
 </template>
 
 <script>
+  import Scroll from 'better-scroll'
   import axios from 'axios'
   import star from './mods/star.vue'
   export default {
@@ -114,6 +115,10 @@
             }
           })
           this.comment = this.ratings
+          /* eslint-disable no-new */
+          new Scroll(this.$refs['ratingsWrapper'], {
+            click: true
+          })
         })
       })
     },

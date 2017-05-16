@@ -73,7 +73,7 @@
 </template>
 <script>
   import star from './mods/star.vue'
-//  import Scroll from 'better-scroll'
+  import Scroll from 'better-scroll'
   export default {
     props: ['seller'],
     data () {
@@ -85,9 +85,9 @@
     mounted () {
       this.$nextTick(() => {
         /* eslint-disable no-new */
-//        new Scroll(this.$refs['sellerWrapper'], {
-//          click: true
-//        })
+        new Scroll(this.$refs['sellerWrapper'], {
+          click: true
+        })
       })
     },
     components: {

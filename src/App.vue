@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <v-header :seller="seller"></v-header>
+    <v-header :seller="d.seller"></v-header>
     <div class="tab">
       <div class="tab-item">
         <router-link to="/goods">商品</router-link>
@@ -12,7 +12,7 @@
         <router-link to="/seller">商家</router-link>
       </div>
     </div>
-    <router-view :seller="seller"></router-view>
+    <router-view :seller="d.seller" :goods="d.goods"></router-view>
   </div>
 </template>
 
@@ -23,13 +23,18 @@
     name: 'app',
     data () {
       return {
-        seller: {}
+        d: {
+          seller: {},
+          goods: [],
+          ratings: []
+        }
       }
     },
     mounted () {
-      axios.get('/api/seller', {params: {id: '1'}}).then((res) => {
-        //  console.log(typeof res.data)
-        this.seller = res.data
+      axios.get('/static/data.json').then((res) => {
+        this.d.seller = res.data.seller
+        this.d.goods = res.data.goods
+        this.d.ratings = res.data.ratings
       })
     },
     methods: {},

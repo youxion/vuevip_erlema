@@ -15,7 +15,7 @@
 </template>
 <script>
   import Vue from 'vue'
-  import {mapMutations} from 'vuex'
+  import {mapState, mapMutations} from 'vuex'
   export default {
     props: ['food'],
     data () {
@@ -39,9 +39,9 @@
           this.vxaddCart(this.food)
           this.food.active = false
         }
-        console.log('--------------addCart-----------------')
-        console.log(this.food)
-        console.log('--------------addCart-----------------')
+//        console.log('--------------addCart-----------------')
+//        console.log(this.food)
+//        console.log('--------------addCart-----------------')
       },
       decreaseCart () {
         this.food.count--
@@ -49,10 +49,15 @@
           this.vxdecreaseCart(this.food)
           this.food.active = true
         }
-        console.log('--------------decreaseCart-----------------')
-        console.log(this.food)
-        console.log('--------------decreaseCart-----------------')
+//        console.log('--------------decreaseCart-----------------')
+//        console.log(this.food)
+//        console.log('--------------decreaseCart-----------------')
       }
+    },
+    computed: {
+      ...mapState([
+        'vxselectFoods'
+      ])
     }
   }
 </script>
