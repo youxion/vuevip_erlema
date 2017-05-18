@@ -45,6 +45,7 @@
   </div>
 </template>
 <script>
+//  import axios from 'axios'
   import Scroll from 'better-scroll'
   import shopcart from './mods/shopcart.vue'
   import cartcontrol from './mods/cartcontrol.vue'
@@ -62,6 +63,13 @@
     },
     mounted () {
       this.$nextTick(() => {
+//        axios.get('/api/goods').then((res) => {
+//          this.goods = res.data
+      })
+//      })
+    },
+    methods: {
+      scroll () {
         /* eslint-disable no-new */
         new Scroll(this.$refs['menu-wrapper'], {
           click: true
@@ -69,9 +77,7 @@
         new Scroll(this.$refs['foods-wrapper'], {
           click: true
         })
-      })
-    },
-    methods: {
+      },
       goDetail (food) {
         this.selectedFood = food
 //        this.$nextTick(() => {

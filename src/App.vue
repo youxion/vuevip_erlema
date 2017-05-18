@@ -12,7 +12,9 @@
         <router-link to="/seller">商家</router-link>
       </div>
     </div>
-    <router-view :seller="d.seller" :goods="d.goods"></router-view>
+    <keep-alive>
+      <router-view :seller="d.seller" :goods="d.goods" ref="router"></router-view>
+    </keep-alive>
   </div>
 </template>
 
@@ -35,6 +37,9 @@
         this.d.seller = res.data.seller
         this.d.goods = res.data.goods
         this.d.ratings = res.data.ratings
+        this.$nextTick(() => {
+          this.$refs.router.scroll()
+        })
       })
     },
     methods: {},
@@ -46,7 +51,7 @@
 </script>
 
 <style scoped>
-  .tab .tab-item a.router-link-active{
-    color:#f01414;
+  .tab .tab-item a.router-link-active {
+    color: #f01414;
   }
 </style>

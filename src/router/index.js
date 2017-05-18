@@ -42,6 +42,10 @@ export default new Router({
       path: '/seller',
       name: 'seller',
       component: seller
+    },
+    {
+      path: '/*',
+      redirect: '/'
     }
   ]
 })
