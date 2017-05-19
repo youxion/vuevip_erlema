@@ -80,7 +80,7 @@
       this.$nextTick(() => {
         if (!this.a) {
           /* eslint-disable no-new */
-          this.a = new BScroll(this.$refs.detailWrapper, {
+          this.a = new BScroll(this.$refs['detailWrapper'], {
             click: true
           })
         }
