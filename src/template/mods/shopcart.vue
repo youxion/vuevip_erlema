@@ -3,7 +3,6 @@
     <div class="content">
       <div class="content-left" @click="show = !show">
         <div class="logo-wrapper">
-          <div class="badge" style="display:none;"></div>
           <div class="logo" :class="{'active':deliveryPrice>0}">
             <i class="icon-shopping_cart"></i>
           </div>

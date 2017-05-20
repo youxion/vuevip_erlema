@@ -1,14 +1,14 @@
 <template>
   <div class="cartcontrol">
     <transition name="fadeRotate">
-      <div class="cart-decrease" v-show="food.count>0" @click.stop.prevent="decreaseCart()">
+      <div class="cart-decrease" v-show="food.count>0" @click.stop.prevent="decreaseCart($event)">
         <span class="icon-remove_circle_outline inner"></span>
       </div>
     </transition>
     <div class="cart-count" v-show="food.count>0">
       {{ food.count }}
     </div>
-    <div id="add" class="cart-add" @click.stop.prevent="addCart()">
+    <div id="add" class="cart-add" @click.stop.prevent="addCart($event)">
       <i class="icon-add_circle"></i>
     </div>
   </div>
@@ -28,7 +28,10 @@
         'vxaddCart',
         'vxdecreaseCart'
       ]),
-      addCart () {
+      addCart (event) {
+        if (!event._constructed) {
+          return
+        }
         if (typeof this.food.count === 'undefined') {
           Vue.set(this.food, 'count', 0)
           Vue.set(this.food, 'active', true)
@@ -43,7 +46,10 @@
 //        console.log(this.food)
 //        console.log('--------------addCart-----------------')
       },
-      decreaseCart () {
+      decreaseCart (event) {
+        if (!event._constructed) {
+          return
+        }
         this.food.count--
         if (this.food.count === 0) {
           this.vxdecreaseCart(this.food)

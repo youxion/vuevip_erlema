@@ -99,22 +99,22 @@
       }
     },
     mounted () {
-      this.$nextTick(() => {
-        axios.get('/api/ratings').then(res => {
-          this.ratings = res.data
-          this.ratings.forEach(val => {
-            this.classifyArr[0].count++
-            this.classifyArr[0].comment.push(val)
-            if (val.score > 3) {
-              this.classifyArr[1].count++
-              this.classifyArr[1].comment.push(val)
-            }
-            if (val.score <= 3) {
-              this.classifyArr[2].count++
-              this.classifyArr[2].comment.push(val)
-            }
-          })
-          this.comment = this.ratings
+      axios.get('/api/ratings').then(res => {
+        this.ratings = res.data
+        this.ratings.forEach(val => {
+          this.classifyArr[0].count++
+          this.classifyArr[0].comment.push(val)
+          if (val.score > 3) {
+            this.classifyArr[1].count++
+            this.classifyArr[1].comment.push(val)
+          }
+          if (val.score <= 3) {
+            this.classifyArr[2].count++
+            this.classifyArr[2].comment.push(val)
+          }
+        })
+        this.comment = this.ratings
+        this.$nextTick(() => {
           /* eslint-disable no-new */
           new Scroll(this.$refs['ratingsWrapper'], {
             click: true
