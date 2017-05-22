@@ -107,17 +107,16 @@
           this.$nextTick(() => {
             if (!this.sc) {
               /* eslint-disable no-new */
-              new BScroll(this.$refs['detailWrapper'], {
+              this.sc = new BScroll(this.$refs['detailWrapper'], {
                 click: true
               })
             } else {
-              this.sc.refresh()
+              this.updatasc()
             }
           })
         })
       },
       addCart (event) {
-//        alert(1)
         this.$refs.cartcontrol.addCart(event)
       },
       filterEvel (item) {
@@ -126,6 +125,11 @@
         })
         item.active = true
         this.comment = item.comment
+      },
+      updatasc () {
+        this.$nextTick(() => {
+          this.sc.refresh()
+        })
       }
     },
     computed: {
@@ -137,8 +141,10 @@
               arr.push(val)
             }
           })
+          this.updatasc()
           return arr
         } else {
+          this.updatasc()
           return this.comment
         }
       }
