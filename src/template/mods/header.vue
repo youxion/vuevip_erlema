@@ -44,7 +44,7 @@
           </div>
           <ul class="supports">
             <li v-for="item in seller.supports" class="support-item">
-              <span class="icon" :class="[item.type]"></span>
+              <span class="icon" :class="iconClassMap[item.type]"></span>
               <span class="text">{{item.description}}</span>
             </li>
           </ul>
