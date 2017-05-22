@@ -45,28 +45,29 @@
   </div>
 </template>
 <script>
-//  import axios from 'axios'
+  import axios from 'axios'
   import Scroll from 'better-scroll'
   import shopcart from './mods/shopcart.vue'
   import cartcontrol from './mods/cartcontrol.vue'
   import foodDetail from './mods/foodDetail.vue'
   import {mapState} from 'vuex'
   export default {
-    props: ['seller', 'goods'],
+    props: ['seller'],
     data () {
       return {
-//        goods: [],
+        goods: [],
         iconClassMap: ['decrease', 'discount', 'special', 'invoice', 'guarantee'],
         selectedFood: '',
         foods: []
       }
     },
     mounted () {
-      this.$nextTick(() => {
-//        axios.get('/api/goods').then((res) => {
-//          this.goods = res.data
+      axios.get('/api/goods').then((res) => {
+        this.goods = res.data
+        this.$nextTick(() => {
+          this.scroll()
+        })
       })
-//      })
     },
     methods: {
       scroll () {

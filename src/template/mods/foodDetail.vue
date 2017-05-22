@@ -1,6 +1,6 @@
 <template>
   <transition name="move">
-    <div class="detailWrapper" ref="detailWrapper" v-if="showDetail">
+    <div class="detailWrapper" ref="detailWrapper" v-show="showDetail">
       <div class="foodDetail">
         <div class="back" @click="show()">
           <i class="icon-arrow_lift"></i>
@@ -111,7 +111,7 @@
                 click: true
               })
             } else {
-              this.updatasc()
+              this.sc.refresh()
             }
           })
         })

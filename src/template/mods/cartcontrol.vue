@@ -38,7 +38,6 @@
           Vue.set(this.food, 'active', true)
         }
         this.food.count++
-        // 存储当前点击的元素，在购物车中会用到
         if (this.food.active) {
           this.vxaddCart(this.food)
           this.food.active = false

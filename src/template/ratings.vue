@@ -116,7 +116,7 @@
         this.comment = this.ratings
         this.$nextTick(() => {
           /* eslint-disable no-new */
-          new Scroll(this.$refs['ratingsWrapper'], {
+          this.sc = new Scroll(this.$refs['ratingsWrapper'], {
             click: true
           })
         })
@@ -131,8 +131,10 @@
               arr.push(val)
             }
           })
+          this.updatasc()
           return arr
         } else {
+          this.updatasc()
           return this.comment
         }
       }
@@ -144,6 +146,11 @@
         })
         item.active = true
         this.comment = item.comment
+      },
+      updatasc () {
+        this.$nextTick(() => {
+          this.sc.refresh()
+        })
       }
     },
     components: {

@@ -37,9 +37,9 @@
         this.d.seller = res.data.seller
         this.d.goods = res.data.goods
         this.d.ratings = res.data.ratings
-        this.$nextTick(() => {
-          this.$refs.router.scroll()
-        })
+//        this.$nextTick(() => {
+//          this.$refs.router.scroll()
+//        })
       })
     },
     methods: {},
