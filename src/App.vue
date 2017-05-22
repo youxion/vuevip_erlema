@@ -13,7 +13,7 @@
       </div>
     </div>
     <keep-alive>
-      <router-view :seller="d.seller" :goods="d.goods" ref="router"></router-view>
+      <router-view :seller="d.seller" ref="router"></router-view>
     </keep-alive>
   </div>
 </template>
