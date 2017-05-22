@@ -1,6 +1,6 @@
 <template>
   <transition name="move">
-    <div class="detailWrapper" ref="detailWrapper" v-show="showDetail">
+    <div class="detailWrapper" ref="detailWrapper" v-if="showDetail">
       <div class="foodDetail">
         <div class="back" @click="show()">
           <i class="icon-arrow_lift"></i>
@@ -29,7 +29,7 @@
           <div class="content">{{food.info}}</div>
         </div>
         <div class="divider"></div>
-        <!--<div class="evaluation">
+        <div class="evaluation">
           <div class="title">
             商品评价
           </div>
@@ -44,9 +44,9 @@
           </div>
           <div class="evel-list">
             <ul>
-              <li class="evel" v-for="evel in evelArr">
+              <li class="evel" v-for="evel in comments">
                 <div class="userInfo">
-                  <div class="time">{{evel.rateTime | time}}</div>
+                  <div class="time">{{evel.rateTime}}</div>
                   <div class="user">
                     <span>{{evel.username}}</span>
                     <span class="avatar"><img :src="evel.avatar" width="12" height="12"></span>
@@ -59,7 +59,7 @@
               </li>
             </ul>
           </div>
-        </div>-->
+        </div>
       </div>
     </div>
   </transition>
@@ -76,26 +76,15 @@
       return {
         showDetail: false,
         classifyArr: [
-          {name: '全部', count: '', active: true},
-          {name: '推荐', count: '', active: false},
-          {name: '吐槽', count: '', active: false}
+          {name: '全部', count: 0, comment: [], active: true},
+          {name: '推荐', count: 0, comment: [], active: false},
+          {name: '吐槽', count: 0, comment: [], active: false}
         ],
         evelflag: true,
         comment: []
       }
     },
     mounted () {
-      this.$nextTick(() => {
-        /* eslint-disable no-new */
-        new BScroll(this.$refs['detailWrapper'], {
-          click: true
-        })
-      })
-//      if (typeof this.food.count === 'undefined') {
-//        Vue.set(this.food, 'count', 0)
-//        Vue.set(this.food, 'active', true)
-//      }
-//      console.log(this.food)
     },
     methods: {
       ...mapMutations([
@@ -103,10 +92,40 @@
       ]),
       show () {
         this.showDetail = !this.showDetail
+        this.$nextTick(() => {
+          this.comment = this.classifyArr[0].comment = this.food.ratings
+          this.food.ratings.forEach(val => {
+            this.classifyArr[0].count++
+            if (val.rateType) {
+              this.classifyArr[2].comment.push(val)
+              this.classifyArr[2].count++
+            } else {
+              this.classifyArr[1].comment.push(val)
+              this.classifyArr[1].count++
+            }
+          })
+          this.$nextTick(() => {
+            if (!this.sc) {
+              /* eslint-disable no-new */
+              new BScroll(this.$refs['detailWrapper'], {
+                click: true
+              })
+            } else {
+              this.sc.refresh()
+            }
+          })
+        })
       },
       addCart (event) {
 //        alert(1)
         this.$refs.cartcontrol.addCart(event)
+      },
+      filterEvel (item) {
+        this.classifyArr.forEach(val => {
+          val.active = false
+        })
+        item.active = true
+        this.comment = item.comment
       }
     },
     computed: {

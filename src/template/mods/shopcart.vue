@@ -1,7 +1,7 @@
 <template>
   <div class="shopCart">
     <div class="content">
-      <div class="content-left" @click="show = !show">
+      <div class="content-left" @click="showa()">
         <div class="logo-wrapper">
           <div class="logo" :class="{'active':deliveryPrice>0}">
             <i class="icon-shopping_cart"></i>
@@ -42,7 +42,7 @@
 <script>
   import {mapMutations} from 'vuex'
   import cartcontrol from './cartcontrol'
-//  import Scroll from 'better-scroll'
+  import Scroll from 'better-scroll'
   export default {
     //      配送费        最少20元起送  有count 或 大于0的商品
     props: ['deliveryPrice', 'minPrice', 'selectFoods'],
@@ -52,8 +52,6 @@
       }
     },
     mounted () {
-      this.$nextTick(() => {
-      })
     },
     computed: {
       // 总金额
@@ -85,18 +83,24 @@
           return '去结算'
         }
       }
-//      },
-//      listToggle () {
-//        /* eslint-disable no-new */
-//        new Scroll(this.$refs['foodlist'], {
-//          click: true
-//        })
-//      }
     },
     methods: {
       ...mapMutations([
         'vxempty'
       ]),
+      showa () {
+        this.show = !this.show
+        this.$nextTick(() => {
+          if (!this.sc) {
+            /* eslint-disable no-new */
+            this.sc = new Scroll(this.$refs['foodlist'], {
+              click: true
+            })
+          } else {
+            this.sc.refresh()
+          }
+        })
+      },
       empty () {
         this.show = false
         this.selectFoods.forEach(val => {
@@ -104,6 +108,13 @@
           val.active = true
         })
         this.vxempty()
+      },
+      listToggle () {
+        this.show = !this.show
+//        /* eslint-disable no-new */
+//        new Scroll(this.$refs['foodlist'], {
+//          click: true
+//        })
       }
     },
     components: {
