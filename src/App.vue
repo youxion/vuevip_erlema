@@ -33,7 +33,6 @@
       }
     },
     mounted () {
-      console.log(document.hidden)
       axios.get('/static/data.json').then((res) => {
         this.d.seller = res.data.seller
         this.d.goods = res.data.goods
@@ -42,8 +41,17 @@
 //          this.$refs.router.scroll()
 //        })
       })
+      document.addEventListener('visibilitychange', this.changeTitle, false)
     },
-    methods: {},
+    methods: {
+      changeTitle () {
+        if (document.hidden) {
+          document.title = 'Σ(ﾟдﾟ;)'
+        } else {
+          document.title = 'VueVip'
+        }
+      }
+    },
     computed: {},
     components: {
       'v-header': header
