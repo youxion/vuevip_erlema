@@ -122,8 +122,10 @@
         })
       })
     },
+    activated () {},
     computed: {
       comments () {
+        this.updatasc()
         if (this.evelflag) {
           let arr = []
           this.comment.forEach(val => {
@@ -131,10 +133,8 @@
               arr.push(val)
             }
           })
-          this.updatasc()
           return arr
         } else {
-          this.updatasc()
           return this.comment
         }
       }

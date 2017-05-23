@@ -33,6 +33,7 @@
       }
     },
     mounted () {
+      console.log(document.hidden)
       axios.get('/static/data.json').then((res) => {
         this.d.seller = res.data.seller
         this.d.goods = res.data.goods
