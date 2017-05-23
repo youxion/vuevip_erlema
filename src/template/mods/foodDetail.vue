@@ -92,6 +92,9 @@
       ]),
       show () {
         this.showDetail = !this.showDetail
+        this.classifyArr.forEach(val => {
+          val.count = 0
+        })
         this.$nextTick(() => {
           this.comment = this.classifyArr[0].comment = this.food.ratings
           this.food.ratings.forEach(val => {
