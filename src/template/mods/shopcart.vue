@@ -16,7 +16,7 @@
       </div>
     </div>
     <transition name="transHeight">
-      <div class="shopcart-list" v-show="totalPrice > 0 && show">
+      <div class="shopcart-list" v-show="totalPrice > 0 && this.cartShow">
         <div class="list-header">
           <h1 class="title">购物车</h1>
           <span class="empty" @click="empty()">清空</span>
@@ -40,20 +40,32 @@
   </div>
 </template>
 <script>
-  import {mapMutations} from 'vuex'
+  import {mapMutations, mapState} from 'vuex'
   import cartcontrol from './cartcontrol'
   import Scroll from 'better-scroll'
   export default {
     //      配送费        最少20元起送  有count 或 大于0的商品
-    props: ['deliveryPrice', 'minPrice', 'selectFoods'],
+    props: ['deliveryPrice', 'minPrice', 'selectFoods', 'freshFlag', 'cartHiden'],
     data () {
       return {
-        show: false
+        show: false,
+        scRefresh: false
       }
     },
     mounted () {
+      // this.freshList()
     },
     computed: {
+      ...mapState([
+        'scrollRefresh',
+        'cartShow'
+      ]),
+
+      cartHidenA () {
+        this.isShow = this.cartHiden
+        console.log('cartHiden')
+      },
+
       // 总金额
       totalPrice () {
         // console.log(this.selectFoods)
@@ -86,20 +98,40 @@
     },
     methods: {
       ...mapMutations([
+        'controlCartShow'
+      ]),
+      freshList () {
+        console.log(this.scRefresh)
+        console.log(this.freshFlag)
+        if (this.scRefresh === this.freshFlag) {
+          this.$nextTick(() => {  // 等待Dom更新
+            console.log(this.sc)
+            this.sc.refresh()
+          })
+        } else {
+          this.scRefresh = !this.scRefresh
+        }
+        return 210
+      },
+      ...mapMutations([
         'vxempty'
       ]),
       showa () {
-        this.show = !this.show
+        // this.show = !this.show
+        this.controlCartShow()
+        const foodlistObj = this.$refs.foodlist
         this.$nextTick(() => {
           if (!this.sc) {
-            /* eslint-disable no-new */
-            this.sc = new Scroll(this.$refs['foodlist'], {
-              click: true
+            /* eslint-disable no-new */    /* ['foodlist'] */
+            this.sc = new Scroll(foodlistObj, {
+              click: true   // 监听点击事件时必须设置
             })
-          } else {
             this.sc.refresh()
+          } else {
+            this.sc.refresh()  // Dom更新后，若滚动区域存在，就刷新滚动区域的高度（增加商品会改变高度）
           }
         })
+        this.$emit('cover', {totalPrice: this.totalPrice})
       },
       empty () {
         this.show = false
@@ -107,7 +139,7 @@
           val.count = 0
           val.active = true
         })
-        this.vxempty()
+        this.vxempty()  // 清空vuex中的购物车数组
       },
       listToggle () {
         this.show = !this.show
@@ -116,6 +148,10 @@
 //          click: true
 //        })
       }
+    },
+    updated () {
+      // this.freshList()
+      // console.log('updated')
     },
     components: {
       cartcontrol

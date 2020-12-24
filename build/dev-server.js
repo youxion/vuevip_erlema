@@ -27,13 +27,13 @@ let elmdata = require('../data.json'),
   seller = elmdata.seller, // 商家数据
   goods = elmdata.goods,  // 商品数据
   ratings = elmdata.ratings;  // 评论数据
-app.get('/api/seller',(req,res) => {
+app.get('/api/seller',(req,res) => {      //============
   res.json(seller)
 })
-app.get('/api/goods',(req,res) => {
+app.get('/api/goods',(req,res) => {         //============
   res.json(goods)
 })
-app.get('/api/ratings',(req,res) => {
+app.get('/api/ratings',(req,res) => {        //============
   res.json(ratings)
 })
 var compiler = webpack(webpackConfig)

@@ -28,30 +28,38 @@ export default new Router({
      ]
      }
     * */
-    { path: '/', redirect: '/goods' },
+    {path: '/', redirect: '/goods'},
     {
       path: '/goods',
-      name: 'goods',
       component: goods,
+      meta: {
+        name: '商品类比'
+      },
       children: [
         {
           path: '/detail',
           component: foodDetail,
           meta: {
-            name: 'detail'
+            name: '商品详情'
           }
         }
       ]
     },
     {
       path: '/ratings',
-      name: 'ratings',
-      component: ratings
+      component: ratings,
+      meta: {
+        name: '用户评论'
+      }
     },
     {
       path: '/seller',
       name: 'seller',
-      component: seller
+      component: seller,
+      meta: {
+        name: '商家信息'
+      }
+
     },
     {
       path: '/*',   //  '/*'表示任何路径，即输入任何路径都跳转到 '/' 根目录，最后都被被重定向到 '/goods'
@@ -59,5 +67,4 @@ export default new Router({
     }
   ],
   mode: 'history'  // 让浏览器里面的url使用斜杆路径形式： /wang/youx/ ，默认显示hash模式：#/wang/
-
 })

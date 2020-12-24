@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    var html = document.querySelector('html')
+    changeRem()
+    window.addEventListener('resize', changeRem)  // 切换设备时改变字体大小，顺便改变页面内容的大小。
+    function changeRem () {
+      var width = html.getBoundingClientRect().width  // 获取屏幕宽度
+      console.log(width)
+
+      // 320px屏宽设备下（@1倍图设计稿），html的font-size值为12px，即 1rem = 12px
+      // 测量设计图时，若测的A元素的宽度值为a，用 a/12 就可以得到A在 @1倍图 下的rem值
+      html.style.fontSize = 12 * (width / 320) + 'px'
+
+      // html的字体大小是怎样改变其他元素的大小的？（如图片、div）
+      // 解析：只要其他元素的单位为rem，浏览器会自动根据html标签的fontSize 的大小计算当前屏幕下的元素大小。
+      //      "屏幕宽度"改变"html的fontSize大小" --->  "html的fontSize大小"改变"rem元素的大小"
+    }
+
+  </script>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>rem布局</title>
+  <link rel="stylesheet" href="./index.css">
+  <script>
+    console.log(window.devicePixelRatio = 2)
+  </script>
+</head>
+<body>
+<div class="app">
+  <div class="child">121</div>
+  <div class="child">体体体体体体体体体体</div>
+  <div class="child">12</div>
+  <div class="child">132</div>
+</div>
+<div class="app">
+  <div class="child2">121child2</div>
+  <div class="child2">child2333</div>
+  <div class="child2">12child2</div>
+  <div class="child2">child2</div>
+</div>
+</body>
+
+</html>

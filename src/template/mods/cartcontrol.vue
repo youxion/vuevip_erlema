@@ -17,7 +17,9 @@
   import Vue from 'vue'
   import {mapState, mapMutations} from 'vuex'
   export default {
-    props: ['food'],
+    props: ['food', 'freshFlag', 'test'],
+    // 通过props传递过来的数据food，可以直接在本组件中当作变量使用、修改，
+    // 注意：修改food时，改变的父级中的food数据
     data () {
       return {
         ok: true
@@ -26,11 +28,17 @@
     methods: {
       ...mapMutations([
         'vxaddCart',
-        'vxdecreaseCart'
+        'vxdecreaseCart',
+        'scChange'
       ]),
       addCart (event) {
 //        console.log(event)
-        if (!event._constructed) {
+       /* Vue.set(this.test, 'wang', true)
+        Vue.set(this.test, 'xiong', true) */
+        // console.log(this.freshFlag)
+        this.$emit('fresh')
+
+        if (!event._constructed) {    // --------
           return
         }
         if (typeof this.food.count === 'undefined') {
@@ -39,7 +47,7 @@
         }
         this.food.count++
         if (this.food.active) {
-          this.vxaddCart(this.food)
+          this.vxaddCart(this.food)  // 将选择的商品加入vuex中的购物车数组
           this.food.active = false
         }
 //        console.log('--------------addCart-----------------')
@@ -51,7 +59,7 @@
           return
         }
         this.food.count--
-        if (this.food.count === 0) {
+        if (this.food.count === 0) {  // 若某个商品的数量为0，就将该商品从购物车数组中删除
           this.vxdecreaseCart(this.food)
           this.food.active = true
         }
@@ -62,7 +70,8 @@
     },
     computed: {
       ...mapState([
-        'vxselectFoods'
+        'vxselectFoods',
+        'scrollRefresh'
       ])
     }
   }

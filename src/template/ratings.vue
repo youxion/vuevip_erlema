@@ -99,6 +99,8 @@
       }
     },
     mounted () {
+      // this.updatasc()  // 不同的comment会渲染为不同的Dom，导致文档的高度改变。要更新滚动高度
+
       axios.get('/api/ratings').then(res => {
         this.ratings = res.data
         this.ratings.forEach(val => {
@@ -125,8 +127,8 @@
     activated () {},
     computed: {
       comments () {
-        this.updatasc()
-        if (this.evelflag) {
+       // this.updatasc()  // 不同的comment会渲染为不同的Dom，导致文档的高度改变。要更新滚动高度
+        if (this.evelflag) {  // ???????????
           let arr = []
           this.comment.forEach(val => {
             if (val.text.length > 0) {
@@ -145,7 +147,8 @@
           val.active = false
         })
         item.active = true
-        this.comment = item.comment
+        this.comment = item.comment  // 切换不同类型的评论数据，用于循环渲染
+        this.updatasc() // 不同的comment会渲染为不同的Dom，导致文档的高度改变。要更新滚动高度
       },
       updatasc () {
         this.$nextTick(() => {

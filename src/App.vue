@@ -32,7 +32,7 @@
         }
       }
     },
-    mounted () {
+    mounted: function mounted () {
       axios.get('/static/data.json').then((res) => {
         this.d.seller = res.data.seller
         this.d.goods = res.data.goods
@@ -42,7 +42,7 @@
 //        })
       })
       document.addEventListener('visibilitychange', this.changeTitle, false)
-      // 监听切换浏览器标签页的行为，只要切换了标签页（即本网页显示、隐藏）就触发一次
+      // 监听切换浏览器标签页的行为，只要切换了标签页就触发一次（即本网页显示、隐藏时触发）
     },
     methods: {
       changeTitle () {

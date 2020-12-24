@@ -34,7 +34,7 @@ body, html{
   -moz-osx-font-smoothing: grayscale;
 }
 .icon-arrow_lift:before{
-  content: "\E900";
+  content: "\E900";   /*-----------------*/
 }
 .icon-check_circle:before{
   content: "\E901";
@@ -394,11 +394,15 @@ body, html{
 }
 .header .detail.fade-enter-active,
 .header .detail.fade-leave-active{
-  transition: opacity 0.5s;
+  transition: all 2s;
+  /*transform: translateX(20px);*/
+  /*transform: scale(2);*/
 }
 .header .detail.fade-enter,
-.header .detail.fade-leave-active{
-  opacity: 0;
+.header .detail.fade-leave-to{
+  https://wulv5.com/static/img/default_header.png: 0;
+  /*width: 50%;*/
+  /*transform: translateX(20px) scale(1);*/
 }
 .star .star-item{
   display: inline-block;
@@ -809,6 +813,15 @@ body, html{
   width: 100%;
   background: #fff;
   transform: translate3d(0, -100%, 0);
+  /*
+     translate3d().如果对X,Y或Z坐标使用百分比值,
+     则百分比表示当前对象的尺寸,而不是其父对象的尺寸.
+
+     shopcart-list隐藏时处于父盒子top为0的位置，
+     显示时会超出父级，移动到父盒子上方。
+     shopcart-list有多高就向上移动多大距离（添加商品会增加它的高度）
+
+  */
   z-index: -1;
 }
 .shopCart .shopcart-list.transHeight-enter-active,
@@ -883,7 +896,8 @@ body, html{
 }
 .backdrop.fade-backdrop-enter-active,
 .backdrop.fade-backdrop-leave-active{
-  transition: opacity 0.5s;
+  /*transition: https://wulv5.com/static/img/default_header.png 0.5s;*/
+  transition: all 0.5s;
 }
 .backdrop.fade-backdrop-enter,
 .backdrop.fade-backdrop-leave-active{
@@ -892,7 +906,7 @@ body, html{
 .cartcontrol .cart-decrease{
   display: inline-block;
   padding: 6px;
-  transition: all 0.4s linear;
+  /*transition: all 0.4s linear;*/
 }
 .cartcontrol .cart-decrease .inner{
   line-height: 24px;
@@ -902,7 +916,11 @@ body, html{
 }
 .cartcontrol .cart-decrease.fadeRotate-enter-active,
 .cartcontrol .cart-decrease.fadeRotate-leave-active{
-  transform: translate3d(0, 0, 0);
+  /* transform: translate3d(0, 0, 0);      */
+  /* 若在enter中设置了translate3d属性，在enter-active不设置该属性，系统会默认该属性值为0 */
+
+  transition: all 0.4s linear;  /* 此条样式可以写在完整显示时的样式里 */
+
 }
 .cartcontrol .cart-decrease.fadeRotate-enter-active .inner,
 .cartcontrol .cart-decrease.fadeRotate-leave-active .inner{
@@ -910,12 +928,12 @@ body, html{
   transform: rotate(0);
 }
 .cartcontrol .cart-decrease.fadeRotate-enter,
-.cartcontrol .cart-decrease.fadeRotate-leave-active{
+.cartcontrol .cart-decrease.fadeRotate-leave-to{
   opacity: 0;
   transform: translate3d(24px, 0, 0);
 }
-.cartcontrol .cart-decrease.fadeRotate-enter .inner,
-.cartcontrol .cart-decrease.fadeRotate-leave-active .inner{
+.inner .fadeRotate-enter ,
+.inner .fadeRotate-leave-active {
   transform: rotate(180deg);
 }
 .cartcontrol .cart-count{
@@ -954,7 +972,7 @@ body, html{
 .backdrop.fade-backdrop-leave-active{
   opacity: 0;
 }
-.detailWrapper{
+.detailWrapper{   /*完整显示时的样式*/
   position: fixed;
   left: 0;
   top: 0;
@@ -964,16 +982,18 @@ body, html{
   transition: all 0.4s ease;
 }
 .detailWrapper.move-enter-avtive,
-.detailWrapper.move-leave-active{
+.detailWrapper.move-leave-active{   /*显示过程中和隐藏过程中的样式*/
   transform: translate3d(0, 0, 0);
+  /*  显示时：x方向的位移从100%  ----> 0 */
+  /*  隐藏时：x方向的位移从 0  ----> 100%  */
 }
 .detailWrapper.move-enter,
-.detailWrapper.move-leave-active{
+.detailWrapper.move-leave-to{  /*初始态和终止态样式*/
   transform: translate3d(100%, 0, 0);
 }
 .foodDetail .back{
   position: absolute;
-  color: #fff;
+  color: red;
   top: 12px;
   left: 6px;
   font-size: 20px;
@@ -1261,6 +1281,9 @@ body, html{
   font-size: 8px;
   padding-left: 2px;
 }
+.ratings-content .evaluation .classify .item.bad.badActive{
+  background: #4d555d;
+}
 .ratings-content .evaluation .classify .item.active{
   color: #fff;
   background: #00a9dc;
@@ -1268,9 +1291,9 @@ body, html{
 .ratings-content .evaluation .classify .item.bad{
   background: rgba(77, 85, 93, 0.2);
 }
-.ratings-content .evaluation .classify .item.badActive{
+/*.ratings-content .evaluation .classify .item.badActive{
   background: #4d555d;
-}
+}*/
 .ratings-content .evaluation .switch{
   font-size: 12px;
   width: 100%;

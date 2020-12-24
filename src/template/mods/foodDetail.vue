@@ -97,7 +97,7 @@ export default {
     show () {
       this.showDetail = !this.showDetail
       this.classifyArr.forEach(val => {
-        val.count = 0
+        val.count = 0    // ???????????????
       })
       this.$nextTick(() => {
         this.comment = this.classifyArr[0].comment = this.food.ratings
@@ -112,21 +112,22 @@ export default {
           }
         })
         this.$nextTick(() => {     // 等到DOM刷新完再创建滚动区域，保证滚动区域包裹了最新状态的DOM
-          console.log(this.src)
+          // console.log(this.src)
           if (!this.sc) {
             /* eslint-disable no-new */
             this.sc = new BScroll(this.$refs['detailWrapper'], {
               click: true
             })
-            console.log(this.src)
+            // console.log(this.src)
           } else {
             this.sc.refresh()
           }
         })
       })
     },
-    addCart (event) {
-      this.$refs.cartcontrol.addCart(event)
+    addCart (event) {  // 此处的addCart绑定在父组件的其他子组件上
+      // 找到了父组件里面引用的子组件cartcontrol，就可以直接调用它里面定义的方法
+      this.$refs.cartcontrol.addCart(event) // 此处的addCart绑定在cartcontrol组件上
     },
     filterEvel (item) {
       this.classifyArr.forEach(val => {

@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.app{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.child{
+  flex: 0 1;
+  border: 1px solid cyan;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+
+}

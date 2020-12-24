@@ -6,6 +6,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module'
   },
+  lintOnSave: false,
   env: {
     browser: true,
   },

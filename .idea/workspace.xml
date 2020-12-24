@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="955eff15-da4b-4862-9a2c-d9783699b19b" name="Default" comment="Vue">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/dev-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/dev-server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/goods.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/mods/cartcontrol.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/mods/evaluation.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/mods/foodDetail.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/mods/header.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/mods/shopcart.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/mods/star.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/ratings.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/seller.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vuex/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vuex/mutations.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vuex/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="wulv5" />
+      </list>
+    </option>
+    <option name="UPDATE_CHANGES_POLICY" value="SHELVE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectId" id="1kEBTyEIMslpVzpB3u9EpqVAWUH" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Code style issuesJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Unit testingJavaScript</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>UnterminatedStatementJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="hea&#9;FILE&#9;file://E:/vip/VueVip/src/template/mods/header.vue&#10;main&#9;FILE&#9;file://E:/vip/VueVip/src/main.js&#10;st&#9;FILE&#9;file://E:/vip/VueVip/src/template/mods/star.vue&#10;data&#9;FILE&#9;file://E:/vip/Vuevip/data.json&#10;style&#9;FILE&#9;file://E:/vip/Vuevip/static/css/style.css&#10;pack&#9;FILE&#9;file://E:/vip/Vuevip/package.json" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="D:\VueVip\node_modules\eslint" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="standardjs.codestyle.accepted" value="true" />
+    <property name="ts.external.directory.path" value="D:\软件安装区\工作专用软件\webStorm\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\VueVip\restore" />
+      <recent name="D:\VueVip\src\vuex" />
+      <recent name="D:\VueVip\public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\VueVip" />
+      <recent name="D:\VueVip\rem" />
+      <recent name="E:\vip\VueVip\static" />
+      <recent name="E:\vip\VueVip" />
+      <recent name="E:\vip\VueVip\test" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="955eff15-da4b-4862-9a2c-d9783699b19b" name="Default" comment="" />
+      <created>1493279338854</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1493279338854</updated>
+      <workItem from="1493279339948" duration="5101000" />
+      <workItem from="1493292654222" duration="329000" />
+      <workItem from="1493356919084" duration="11000" />
+      <workItem from="1493537088839" duration="7586000" />
+      <workItem from="1493790397944" duration="8000" />
+      <workItem from="1493790635920" duration="179000" />
+      <workItem from="1493792867988" duration="1789000" />
+      <workItem from="1493795351444" duration="8747000" />
+      <workItem from="1493872871996" duration="10000" />
+      <workItem from="1493888400653" duration="1260000" />
+      <workItem from="1493962436444" duration="1466000" />
+      <workItem from="1493966583591" duration="1297000" />
+      <workItem from="1494056352705" duration="4370000" />
+      <workItem from="1494219716655" duration="26000" />
+      <workItem from="1494309001245" duration="7000" />
+      <workItem from="1494319840677" duration="4537000" />
+      <workItem from="1494397723382" duration="2665000" />
+      <workItem from="1494421248053" duration="7807000" />
+      <workItem from="1494478793983" duration="19168000" />
+      <workItem from="1494565137398" duration="3363000" />
+      <workItem from="1494570499123" duration="311000" />
+      <workItem from="1494571053623" duration="419000" />
+      <workItem from="1494571545362" duration="71000" />
+      <workItem from="1494571904511" duration="306000" />
+      <workItem from="1494572219173" duration="203000" />
+      <workItem from="1494572439716" duration="21246000" />
+      <workItem from="1494653489295" duration="13258000" />
+      <workItem from="1494672290446" duration="3047000" />
+      <workItem from="1494827830929" duration="17233000" />
+      <workItem from="1494850283653" duration="9733000" />
+      <workItem from="1494915018173" duration="526000" />
+      <workItem from="1494916903385" duration="161000" />
+      <workItem from="1494917407988" duration="16763000" />
+      <workItem from="1494995373712" duration="5199000" />
+      <workItem from="1495020094596" duration="8405000" />
+      <workItem from="1495087283962" duration="8376000" />
+      <workItem from="1495171629463" duration="90000" />
+      <workItem from="1495171746396" duration="31000" />
+      <workItem from="1495171790437" duration="113000" />
+      <workItem from="1495171914069" duration="27546000" />
+      <workItem from="1495257915285" duration="10745000" />
+      <workItem from="1495427578102" duration="25478000" />
+      <workItem from="1495515072735" duration="11303000" />
+      <workItem from="1605255960461" duration="28674000" />
+      <workItem from="1605433193839" duration="5647000" />
+      <workItem from="1605574686410" duration="2969000" />
+      <workItem from="1605583089347" duration="1531000" />
+      <workItem from="1605663376281" duration="4783000" />
+      <workItem from="1605695196401" duration="118000" />
+      <workItem from="1606303535936" duration="1472000" />
+      <workItem from="1606431687749" duration="4655000" />
+      <workItem from="1606531788165" duration="24846000" />
+      <workItem from="1606960363890" duration="27312000" />
+      <workItem from="1607783129321" duration="10824000" />
+      <workItem from="1607828673772" duration="1829000" />
+      <workItem from="1607864978119" duration="3995000" />
+      <workItem from="1608026292228" duration="3000" />
+      <workItem from="1608070445089" duration="19452000" />
+      <workItem from="1608131360898" duration="50258000" />
+      <workItem from="1608303864552" duration="22665000" />
+      <workItem from="1608390636412" duration="25593000" />
+      <workItem from="1608601987786" duration="36400000" />
+      <workItem from="1608713149100" duration="901000" />
+      <workItem from="1608770882270" duration="10333000" />
+    </task>
+    <task id="LOCAL-00001" summary="Vue">
+      <created>1494573391156</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1494573391156</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Vue">
+      <created>1494573524638</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1494573524638</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Vue">
+      <created>1494573674561</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1494573674561</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Vue">
+      <created>1494573784643</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1494573784643</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Vue">
+      <created>1494573849697</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1494573849697</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Vue">
+      <created>1494574141042</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1494574141042</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Vue">
+      <created>1494574311746</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1494574311746</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Vue">
+      <created>1494574421969</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1494574421969</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Vue">
+      <created>1494575613340</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1494575613340</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Vue">
+      <created>1494591497930</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1494591497930</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Vue">
+      <created>1494597347567</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1494597347567</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Vue">
+      <created>1494657756471</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1494657756471</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Vue">
+      <created>1494835130270</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1494835130270</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Vue">
+      <created>1494835772438</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1494835772438</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Vue">
+      <created>1494848944491</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1494848944491</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Vue">
+      <created>1494850302337</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1494850302337</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Vue">
+      <created>1494851719496</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1494851719496</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Vue">
+      <created>1494851771543</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1494851771543</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Vue">
+      <created>1494857614067</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1494857614067</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Vue">
+      <created>1494932121996</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1494932121996</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Vue">
+      <created>1495095465992</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1495095465992</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Vue">
+      <created>1495171958041</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1495171958041</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Vue">
+      <created>1495258637182</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1495258637182</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Vue">
+      <created>1495442268126</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1495442268126</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Vue">
+      <created>1495443645141</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1495443645141</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Vue">
+      <created>1495457230114</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1495457230114</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Vue">
+      <created>1495461057818</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1495461057818</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Vue">
+      <created>1495463138648</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1495463138648</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Vue">
+      <created>1495521891203</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1495521891203</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Vue">
+      <created>1495524760730</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1495524760730</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Vue">
+      <created>1495528924612</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1495528924612</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Vue">
+      <created>1495538109762</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1495538109762</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="E:\vip\Vuevip\VueVip" />
+    </ignored-roots>
+    <MESSAGE value="Vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vue" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="353" y="88" key="#ESLint" timestamp="1608430214024">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="353" y="88" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1608430214024" />
+    <state x="515" y="272" key="#VCS_History_Cache_Settings" timestamp="1606489144432">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="515" y="272" key="#VCS_History_Cache_Settings/0.0.1366.728@0.0.1366.728" timestamp="1606489144432" />
+    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1605433790477">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1605433790477" />
+    <state x="338" y="140" key="EditFileWatcherDialog" timestamp="1605664004545">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="338" y="140" key="EditFileWatcherDialog/0.0.1366.728@0.0.1366.728" timestamp="1605664004545" />
+    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1605258398055">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605258398055" />
+    <state x="559" y="294" key="Github.CreateGistDialog" timestamp="1608702516970">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="559" y="294" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1608702516970" />
+    <state x="385" y="96" width="596" height="618" key="find.popup" timestamp="1608613817141">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="385" y="96" width="596" height="618" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1608613817141" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1608613733432">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1608613733432" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1608613785851">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1608613785851" />
+  </component>
+</project>
