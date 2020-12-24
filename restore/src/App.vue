@@ -13,7 +13,7 @@
       </div>
     </div>
     <keep-alive>
-      <router-view :seller="d.seller" ref="router"></router-view>
+      <router-view :seller="d.seller" ref="router"></router-view><!--  路由切换时，给当前激活组件传递一条seller数据-->
     </keep-alive>
   </div>
 </template>
@@ -42,10 +42,11 @@
 //        })
       })
       document.addEventListener('visibilitychange', this.changeTitle, false)
+      // 监听切换浏览器标签页的行为，只要切换了标签页（即本网页显示、隐藏）就触发一次
     },
     methods: {
       changeTitle () {
-        if (document.hidden) {
+        if (document.hidden) {  // 判断浏览器是否在显示本页面（可能在显示其他标签页）
           document.title = 'Σ(ﾟдﾟ;)'
         } else {
           document.title = 'VueVip'

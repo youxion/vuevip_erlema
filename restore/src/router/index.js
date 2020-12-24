@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import goods from '../template/goods.vue'
 import ratings from '../template/ratings.vue'
 import seller from '../template/seller.vue'
+import foodDetail from '../template/mods/foodDetail.vue'
 
 Vue.use(Router)
 export default new Router({
@@ -31,7 +32,16 @@ export default new Router({
     {
       path: '/goods',
       name: 'goods',
-      component: goods
+      component: goods,
+      children: [
+        {
+          path: '/detail',
+          component: foodDetail,
+          meta: {
+            name: 'detail'
+          }
+        }
+      ]
     },
     {
       path: '/ratings',
@@ -44,8 +54,10 @@ export default new Router({
       component: seller
     },
     {
-      path: '/*',
+      path: '/*',   //  '/*'表示任何路径，即输入任何路径都跳转到 '/' 根目录，最后都被被重定向到 '/goods'
       redirect: '/'
     }
-  ]
+  ],
+  mode: 'history'  // 让浏览器里面的url使用斜杆路径形式： /wang/youx/ ，默认显示hash模式：#/wang/
+
 })

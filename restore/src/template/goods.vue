@@ -62,7 +62,8 @@
       }
     },
     mounted () {
-      axios.get('/api/goods').then((res) => {
+      axios.get('/api/goods').then((res) => {    // 从本地node服务器 build/dev-server.js 获取数据
+        console.log(res)
         this.goods = res.data
         this.$nextTick(() => {
           this.scroll()
